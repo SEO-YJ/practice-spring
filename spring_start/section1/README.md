@@ -67,8 +67,8 @@
 ### gradle의 역할
 - 예를 들어, 우리가 https://start.spring.io/ 여기서 스프링 프로젝트를 만들 때, dependencies에서 필요한 라이브러리를 선택하였었다.
 - 그러면, gradle은 우리가 선택한 라이브러리들과 그 라이브러리와 의존관계가 있는 라이브러리들을 다 땡겨온다.
-- ex) 선택한 라이브러리 <img src="./img/libraries.png" width="100">
-- ex) 선택한 라이브러리와 의존관계에 있는 라이브러리 <img src="./img/dependencies.png" width="100">
+- ex) 선택한 라이브러리 ![ex_screenshot](./img/libraries.png)
+- ex) 선택한 라이브러리와 의존관계에 있는 라이브러리 ![ex_screenshot](./img/dependencies.png)
 
 + Tip! window tool bar에 gradle 추가 방법
 <img src="./img/window-tool-bar-gradle.png" width="100">
