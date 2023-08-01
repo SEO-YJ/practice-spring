@@ -69,7 +69,7 @@
 - 그러면, gradle은 우리가 선택한 라이브러리들과 그 라이브러리와 의존관계가 있는 라이브러리들을 다 땡겨온다.
 - ex) 선택한 라이브러리 
 ![ex_screenshot](practice-spring/img/libraries.png)
-<img src="./img/libraries.png", height="100x", width="100px">
+<img src="./img/libraries.png", width="900", height="1000">
 <img src="practice/img/libraries.png", height="100x", width="100px">
 - ex) 선택한 라이브러리와 의존관계에 있는 라이브러리 
 ![ex_screenshot](./img/dependencies.png)
