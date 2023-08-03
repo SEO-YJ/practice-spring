@@ -36,8 +36,7 @@
             - 우리가 다루어야 할 부분은 main의 java 폴더 파일
             - main의 .java 파일을 실행하여 프로젝트 실행 가능
         - build.gradle
-            - 
-                java {
+              - java {
                         sourceCompatibility = '11'
                     }
               - sourceCompatibility는 java의 '버전'을 관리하는 부분
@@ -68,7 +67,7 @@
 - 예를 들어, 우리가 https://start.spring.io/ 여기서 스프링 프로젝트를 만들 때, dependencies에서 필요한 라이브러리를 선택하였었다.
 - 그러면, gradle은 우리가 선택한 라이브러리들과 그 라이브러리와 의존관계가 있는 라이브러리들을 다 땡겨온다.
 - ex) 선택한 라이브러리 
-![ex_screenshot](practice-spring/img/libraries.png)
+![ex_screenshot](./img/libraries.png)
 <img src="./img/libraries.png", width="900", height="1000">
 <img src="practice/img/libraries.png", height="100x", width="100px">
 - ex) 선택한 라이브러리와 의존관계에 있는 라이브러리 
