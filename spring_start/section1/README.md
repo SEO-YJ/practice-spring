@@ -120,9 +120,7 @@
 ### welcome page 테스트
 - Test 1: static 폴더 대신에 templates 폴더에 index.html 파일 생성
 ![ex_screenshot](/img/test1-index.png)
-<img src="./img/test1-index.png" width="100">
 ![ex_screenshot](/img/test1-index3.png)
-<img src="./img/test1-index3.png" width="100">
 - 결과: Welcome 페이지 생성 성공
 ![ex_screenshot](/img/test1-index2.png)
 
