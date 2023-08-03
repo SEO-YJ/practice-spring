@@ -193,3 +193,20 @@ REST 웹 서비스뿐만 아니라 Spring MVC를 사용하여 동적 HTML 콘텐
 - hello 하이퍼링크를 클릭 시, hello.html 파일이 렌더링 되어 화면에 보임
 ![ex_screenshot](/img/thymeleaf-execution.png)
 
+
+## 4. 빌드하고 실행하기
+- 빌드를 하고 실제 실행할 수 있는 파일을 만들어 볼 것이다.
+
+### 빌드하는 방법
+1. 터미널 키기    
+2. spring 프로젝트 파일로 이동     
+3. ./gradlew build (build 안될 시, ./gradlew clean -> ./gradlew build)로    
+![ex_screenshot](/img/spring-build.png)
+
+### 빌드 파일 터미널에서 실행하는 방법(m1)
+1. build 폴더로 이동    
+2. libs 파일로 이동    
+3. ls -arlth로 파일 확인    
+4. java -jar (파일 이름)으로 파일 실행    
+5. control + c로 실행 종료      
+![ex_screenshot](/img/thymeleaf-execution.png)
