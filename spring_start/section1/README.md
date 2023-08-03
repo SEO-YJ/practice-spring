@@ -68,13 +68,12 @@
 - 그러면, gradle은 우리가 선택한 라이브러리들과 그 라이브러리와 의존관계가 있는 라이브러리들을 다 땡겨온다.
 - ex) 선택한 라이브러리 
 ![ex_screenshot](/img/libraries.png)
-<img src="/img/libraries.png", width="900", height="1000">
-<img src="practice/img/libraries.png", height="100x", width="100px">
 - ex) 선택한 라이브러리와 의존관계에 있는 라이브러리 
-![ex_screenshot](./img/dependencies.png)
+![ex_screenshot](/img/dependencies.png)
 
 + Tip! window tool bar에 gradle 추가 방법
-<img src="./img/window-tool-bar-gradle.png" width="100">
+![ex_screenshot](/img/window-tool-bar-gradle.png)
+
 
 ### Spring boot 기본 라이브러리
 - 스프링 부트 라이브러리
@@ -95,8 +94,7 @@
         - mockito: 목 라이브러리
         - assertj: 테스트 코드를 좀 더 편하게 작성하게 도와주는 라이브러리
         - spring-test: 스프링 통합 테스트 지원
-
-<img src="./img/window-tool-bar-gradle-dependencies.png" width="100">
+![ex_screenshot](/img/window-tool-bar-gradle-dependencies.png)
 
 + Question? 왜 tomcap 임베디드 서버의 기본 포트가 8080일까?
 [tomcat 8080인 이유](https://brocess.tistory.com/158)
@@ -107,7 +105,7 @@
 
 ### welcome page
 - [spring 공식문서: welcome page](https://docs.spring.io/spring-boot/docs/current/reference/html/web.html#web.servlet.spring-mvc.welcome-page)
-<img src="./img/doc-welcomepage.png" width="100">
+![ex_screenshot](/img/doc-welcomepage.png)
 
 - Spring Boot supports both static and templated welcome pages. It first looks for an index.html file in the configured static content locations. If one is not found, it then looks for an index template. If either is found, it is automatically used as the welcome page of the application.
 
@@ -115,29 +113,31 @@
 
 ### welcome page 만들어보기
 - src -> main -> resources -> static에 index.html 파일 생성
-<img src="./img/ex-index.png" width="100">
-<img src="./img/ex-index2" width="100">
+![ex_screenshot](/img/ex-index.png)
+![ex_screenshot](/img/ex-index2.png)
 
 
 ### welcome page 테스트
 - Test 1: static 폴더 대신에 templates 폴더에 index.html 파일 생성
+![ex_screenshot](/img/test1-index.png)
 <img src="./img/test1-index.png" width="100">
+![ex_screenshot](/img/test1-index3.png)
 <img src="./img/test1-index3.png" width="100">
 - 결과: Welcome 페이지 생성 성공
-<img src="./img/test1-index2.png" width="100">
+![ex_screenshot](/img/test1-index2.png)
 
 
 - Test 2: index.html 파일 이름을 Index.html로 변경
-<img src="./img/test2-index.png" width="100">
-<img src="./img/test2-index3.png" width="100">
+![ex_screenshot](/img/test2-index.png)
+![ex_screenshot](/img/test2-index3.png)
 - 결과: Welcome 페이지 생성 성공
-<img src="./img/test2-index2.png" width="100">
+![ex_screenshot](/img/test2-index2.png)
 
 
 - Test 3: index.html 파일 이름을 hello.html로 변경
-<img src="./img/test3-index.png" width="100">
+![ex_screenshot](/img/test3-index.png)
 - 결과: html 파일이 welcome page로 사용 안됨
-<img src="./img/test3-index2.png" width="100">
+![ex_screenshot](/img/test3-index2.png)
 
 - 결론
 1. welcome page를 생성하기 위해서는 파일명을 'index.html', 'Index.html'로 만들어야 한다.
@@ -152,7 +152,7 @@
 - 동적인 화면을 만들 수 있다.
 
 - [spring 공식문서: thymeleaf](https://docs.spring.io/spring-boot/docs/current/reference/html/web.html#web)
-<img src="./img/doc-thymeleaf.png" width="100">
+![ex_screenshot](/img/doc-thymeleaf.png)
 
 
 - Template Engines
@@ -180,7 +180,7 @@ REST 웹 서비스뿐만 아니라 Spring MVC를 사용하여 동적 HTML 콘텐
     - 공식문서에 따라, thymeleaf 엔진을 기본 구성으로 사용하고, templates의 html 파일에 thymeleaf 엔진을 선언하여 사용
     
 ### thymeleaf 템플릿 엔진 사용 방법 - 동작 원리
-<img src="./img/thymeleaf-process.png" width="100">
+![ex_screenshot](/img/thymeleaf-process.png)
 1. web에서 /hello라고 처리되면(localhost:8080/hello) GetMapping(‘hello’) 메서드 호출          
 2. 내장된 톰캣 서버에서 url 주소를 받아서 spring에게 물어봄         
 3. http 통신에서 GetMapping은 Get 역할을 함, 이를 통해 GetMapping(‘hello’)로 url 매치       
@@ -193,5 +193,5 @@ REST 웹 서비스뿐만 아니라 Spring MVC를 사용하여 동적 HTML 콘텐
 
 ### thymeleaf 실행 화면
 - hello 하이퍼링크를 클릭 시, hello.html 파일이 렌더링 되어 화면에 보임
-<img src="./img/thymeleaf-execution.png" width="100">
+![ex_screenshot](/img/thymeleaf-execution.png)
 
