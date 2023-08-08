@@ -209,4 +209,5 @@ REST 웹 서비스뿐만 아니라 Spring MVC를 사용하여 동적 HTML 콘텐
 3. ls -arlth로 파일 확인    
 4. java -jar (파일 이름)으로 파일 실행    
 5. control + c로 실행 종료      
-![ex_screenshot](/img/thymeleaf-execution.png)
+![ex_screenshot](/img/spring-execution.png)
+
