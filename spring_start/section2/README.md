@@ -114,18 +114,15 @@ public string helloString(@RequestParam("name"), String name){
 
 ### API - 동작 원리
 ![ex_screenshot](/img/api-process.png)
-1. 
-@ResponseBody 를 사용 X: viewResolver에게 전달
-@ResponseBody 를 사용 O: Http에게 데이터를 직접 전달 
-
+1. @ResponseBody
+- @ResponseBody를 사용 X: viewResolver에게 전달
+- @ResponseBody를 사용 O: Http에게 데이터를 직접 전달 
 2. viewResolver 대신에 HttpMessageConverter 가 동작
-
-3. 반환 값이 String 타입(문자열 객체)일 경우: HTTP의 BODY에 문자 내용을 직접 반환 
+3. 반환 타입 
+- 반환 값이 String 타입(문자열 객체)일 경우: HTTP의 BODY에 문자 내용을 직접 반환 
   기본 문자처리: StringHttpMessageConverter 
-  
-  반환 값이 객체 타입일 경우: Json으로 반환(객체 -> Json)
+- 반환 값이 객체 타입일 경우: Json으로 반환(객체 -> Json)
   기본 객체처리: MappingJackson2HttpMessageConverter
-  
 4. byte 처리 등등 기타 여러 HttpMessageConverter가 기본으로 등록되어 있음
 
 
