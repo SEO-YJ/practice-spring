@@ -116,9 +116,9 @@ public string helloString(@RequestParam("name"), String name){
 ![ex_screenshot](/img/api-process.png)
 1. 
 @ResponseBody 를 사용 X: viewResolver에게 전달
-@ResponseBody 를 사용 O: Http에게 데이터를 직접 전달
+@ResponseBody 를 사용 O: Http에게 데이터를 직접 전달 
 
-2. viewResolver 대신에 HttpMessageConverter 가 동작 
+2. viewResolver 대신에 HttpMessageConverter 가 동작
 
 3. 반환 값이 String 타입(문자열 객체)일 경우: HTTP의 BODY에 문자 내용을 직접 반환 
   기본 문자처리: StringHttpMessageConverter 
