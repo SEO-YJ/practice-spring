@@ -64,7 +64,60 @@ ex> 서버-서버, 서버-클라이언트
 ![ex_screenshot](/img/none-parameter-execution.png)
 
 2. 매개변수 전달 시
-- ![ex_screenshot](/img/exist-parameter-execution.png)
+![ex_screenshot](/img/exist-parameter-execution.png)
 - url에 매개변수 전달 방법
 : url?매개변수명=값
+
+
+## 3. API
+- 화면을 가져오는 방식
+1. html 가져오기: 정적 컨텐츠, 템플릿 엔진
+2. 데이터 가져오기: API
+
+- ResponseBody?
+: http는 헤더부와 바디부가 존재하는데, 바디부에 데이터를 직접 넣어주기 위함
+```java
+// API 예시
+@Getmapping('hello-string')
+@ResponseBody
+public string helloString(@RequestParam("name"), String name){
+    return "hello" + name;
+}
+```
+- 코드 설명 
+: 응답(Response) body 부분에 직접 데이터를 넣어주겠다.
+
++Tip! 실행 중인 서버, 강제 종료하는 법
+1. 터미널 키기
+2. lsof -i tcp:'포트번호'로 실행중인 프로세스 확인
+3. sudo kill -9 {PID번호}로 실행중인 프로세스 종료      
+[실행중인 프로세스 터미널로 강제종료 하는 법](https://dundung.tistory.com/148)   
+
+### API와 템플릿 엔진
+- API와 템플릿 엔진의 차이
+1. API는 View가 없다.
+- 페이지 소스 검사 결과
+![ex_screenshot](/img/api-execution.png)
+
+2. 템플릿 엔진은 View라는 화면을 조작하는 방식이다. 
+
++Tip! 인텔리제이 Getter, Setter 단축키    
+: command + n    
+
++Tip! 인텔리제이 문장 자동 완성
+: command + shift + enter 
+
+### json
+: 데이터 전달 형식
+1. 최근 데이터 전달 형식은 xml보다 json을 많이 사용한다.
+2. Spring에서는 @ResponseBody에서 객체를 반환하면, json으로 반환을 하는 것이 기본이다.
+
+### API - 동작 원리
+![ex_screenshot](/img/api-process.png)
+1. @ResponseBody 를 사용 X: viewResolver에게  전달@ResponseBody 를 사용 O: Http에게 데이터를 직접 전달
+2. viewResolver 대신에 HttpMessageConverter 가 동작 
+3. 반환 값이 String 타입(문자열 객체)일 경우: HTTP의 BODY에 문자 내용을 직접 반환 기본 문자처리: StringHttpMessageConverter 반환 값이 객체 타입일 경우: Json으로 반환(객체 -> Json)기본 객체처리: MappingJackson2HttpMessageConverter 
+4. byte 처리 등등 기타 여러 HttpMessageConverter가 기본으로 등록되어 있음
+
+
 
